@@ -11,13 +11,13 @@ function App() {
     return (
         <>
             <div>
-                {WebApp.initDataUnsafe.user ? (
+                {WebApp.initDataUnsafe?.user ? (
                     <div>
-                        <h1>Welcome {WebApp.initDataUnsafe.user?.username}</h1>
+                        <h1>Welcome {WebApp.initDataUnsafe?.user?.username}</h1>
                         User data:
                         <pre>
                             {JSON.stringify(
-                                WebApp.initDataUnsafe.user,
+                                WebApp.initDataUnsafe?.user,
                                 null,
                                 2
                             )}
