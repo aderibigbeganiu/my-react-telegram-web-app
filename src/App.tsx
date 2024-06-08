@@ -11,6 +11,25 @@ function App() {
     return (
         <>
             <div>
+                {WebApp.initDataUnsafe.user ? (
+                    <div>
+                        <h1>Welcome {WebApp.initDataUnsafe.user?.username}</h1>
+                        User data:
+                        <pre>
+                            {JSON.stringify(
+                                WebApp.initDataUnsafe.user,
+                                null,
+                                2
+                            )}
+                        </pre>
+                        Eniter Web App data:
+                        <pre>{JSON.stringify(WebApp, null, 2)}</pre>
+                    </div>
+                ) : (
+                    <div>Make sure web app is opened from telegram client</div>
+                )}
+            </div>
+            <div>
                 <a href="https://vitejs.dev" target="_blank">
                     <img src={viteLogo} className="logo" alt="Vite logo" />
                 </a>
